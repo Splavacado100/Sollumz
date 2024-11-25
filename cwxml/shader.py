@@ -160,6 +160,8 @@ class ShaderDefFlag(Flag):
     IS_CLOTH = auto()
     IS_TERRAIN = auto()
     IS_TERRAIN_MASK_ONLY = auto()
+    IS_VEHICLE = auto()
+    IS_VEHICLE_PAINT = auto()
 
 class ShaderDefFlagProperty(ElementProperty):
     value_types = (ShaderDefFlag)
@@ -275,6 +277,14 @@ class ShaderDef(ElementTree):
     @property
     def is_terrain_mask_only(self) -> bool:
         return ShaderDefFlag.IS_TERRAIN_MASK_ONLY in self.flags
+
+    @property
+    def is_vehicle(self) -> bool:
+        return ShaderDefFlag.IS_VEHICLE in self.flags
+
+    @property
+    def is_vehicle_paint(self) -> bool:
+        return ShaderDefFlag.IS_VEHICLE_PAINT in self.flags
 
     @property
     def is_alpha(self) -> bool:

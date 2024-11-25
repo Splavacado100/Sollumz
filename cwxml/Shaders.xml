@@ -45,6 +45,7 @@
   <FileName>
    <Item bucket="0">vehicle_mesh.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -345,6 +346,7 @@
   <FileName>
    <Item bucket="0">vehicle_tire.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -389,6 +391,7 @@
   <FileName>
    <Item bucket="0">vehicle_tire_emissive.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -434,6 +437,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint4.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -570,6 +574,7 @@
    <Item bucket="4">vehicle_nosplash.sps</Item>
    <Item bucket="5">vehicle_nowater.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -655,6 +660,7 @@
   <FileName>
    <Item bucket="0">vehicle_mesh2_enveff.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -802,6 +808,7 @@
   <FileName>
    <Item bucket="0">vehicle_interior2.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -920,6 +927,7 @@
   <FileName>
    <Item bucket="0">vehicle_detail2.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -962,6 +970,7 @@
   <FileName>
    <Item bucket="0">vehicle_shuts.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -1004,6 +1013,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint3.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -1053,6 +1063,7 @@
   <FileName>
    <Item bucket="1">vehicle_badges.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -1129,6 +1140,7 @@
   <FileName>
    <Item bucket="1">vehicle_lightsemissive.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -1201,6 +1213,7 @@
    <Item bucket="1">vehicle_vehglass.sps</Item>
    <Item bucket="1">vehicle_lights.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -1423,6 +1436,7 @@
   <FileName>
    <Item bucket="1">vehicle_vehglass_inner.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -1465,6 +1479,7 @@
   <FileName>
    <Item bucket="0">vehicle_licenseplate.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -1680,6 +1695,7 @@
   <FileName>
    <Item bucket="1">vehicle_dash_emissive.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -1718,6 +1734,7 @@
   <FileName>
    <Item bucket="0">vehicle_emissive_opaque.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -1823,6 +1840,7 @@
   <FileName>
    <Item bucket="0">vehicle_dash_emissive_opaque.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -1860,6 +1878,7 @@
   <FileName>
    <Item bucket="1">vehicle_decal.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -2216,6 +2235,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint2.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -2331,6 +2351,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint8.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -2738,6 +2759,7 @@
   <FileName>
    <Item bucket="0">vehicle_interior.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -2811,6 +2833,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint6_enveff.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -3129,6 +3152,7 @@
   <FileName>
    <Item bucket="0">vehicle_track2.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -3214,6 +3238,7 @@
   <FileName>
    <Item bucket="0">vehicle_detail.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -3296,6 +3321,7 @@
   <FileName>
    <Item bucket="3">vehicle_cutout.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -3341,6 +3367,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint4_enveff.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -3495,6 +3522,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint9.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -3872,6 +3900,7 @@
   <FileName>
    <Item bucket="1">vehicle_blurredrotor.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -4075,7 +4104,7 @@
   <FileName>
    <Item bucket="0">vehicle_cloth.sps</Item>
   </FileName>
-  <Flags>IS_CLOTH</Flags>
+  <Flags>IS_CLOTH IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -4158,6 +4187,7 @@
   <FileName>
    <Item bucket="0">vehicle_basic.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -4326,6 +4356,7 @@
   <FileName>
    <Item bucket="0">vehicle_track.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -4437,6 +4468,7 @@
   <FileName>
    <Item bucket="0">vehicle_generic.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -4482,6 +4514,7 @@
   <FileName>
    <Item bucket="0">vehicle_track_ammo.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -4608,6 +4641,7 @@
   <FileName>
    <Item bucket="0">vehicle_track_emissive.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -4685,6 +4719,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint5_enveff.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -5261,6 +5296,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint6.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -5372,6 +5408,7 @@
   <FileName>
    <Item bucket="2">vehicle_decal2.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -5457,6 +5494,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint1_enveff.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -5555,6 +5593,7 @@
   <FileName>
    <Item bucket="0">vehicle_mesh_enveff.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -6178,6 +6217,7 @@
   <FileName>
    <Item bucket="1">vehicle_emissive_alpha.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -6247,6 +6287,7 @@
   <FileName>
    <Item bucket="0">vehicle_track2_emissive.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -6293,6 +6334,7 @@
   <FileName>
    <Item bucket="1">vehicle_track_siren.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -6694,6 +6736,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint3_enveff.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -6954,6 +6997,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint2_enveff.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -6995,6 +7039,7 @@
   <FileName>
    <Item bucket="1">vehicle_blurredrotor_emissive.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -7103,6 +7148,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint7_enveff.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -7481,6 +7527,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint7.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -7524,6 +7571,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint4_emissive.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -8035,6 +8083,7 @@
   <FileName>
    <Item bucket="0">vehicle_paint3_lvr.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE IS_VEHICLE_PAINT</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />
@@ -8384,7 +8433,7 @@
   <FileName>
    <Item bucket="0">vehicle_cloth2.sps</Item>
   </FileName>
-  <Flags>IS_CLOTH</Flags>
+  <Flags>IS_CLOTH IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV2">
     <Position />
@@ -8824,6 +8873,7 @@
   <FileName>
    <Item bucket="1">vehicle_lightsemissive_siren.sps</Item>
   </FileName>
+  <Flags>IS_VEHICLE</Flags>
   <Layout>
    <Item type="GTAV1">
     <Position />

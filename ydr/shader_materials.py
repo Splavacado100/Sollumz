@@ -1121,6 +1121,9 @@ def create_terrain_shader(b: ShaderBuilder):
     bsdf.inputs["Specular IOR Level"].default_value = 0
     link_value_shader_parameters(b)
 
+def create_vehicle_paint_shader(b: ShaderBuilder):
+    create_basic_shader_nodes(b)
+
 
 def create_uv_map_nodes(b: ShaderBuilder):
     """Creates a ``ShaderNodeUVMap`` node for each UV map used in the shader."""
@@ -1207,6 +1210,8 @@ def create_shader(filename: str, in_place_material: Optional[bpy.types.Material]
 
     if shader.is_terrain:
         create_terrain_shader(builder)
+    elif shader.is_vehicle_paint:
+        create_vehicle_paint_shader(builder)
     else:
         create_basic_shader_nodes(builder)
 
