@@ -815,6 +815,29 @@ class SOLLUMZ_PT_VALUEPARAMS_PANEL(bpy.types.Panel):
         for n in nodes:
             n.draw(context, layout, label=n.name, compact=True)
 
+class SOLLUMZ_PT_VEHPREVIEW_PANEL(bpy.types.Panel):
+    bl_label = "Vehicle Preview Options"
+    bl_idname = "SOLLUMZ_PT_VEHPREVIEW_PANEL"
+    bl_space_type = "PROPERTIES"
+    bl_region_type = "WINDOW"
+    bl_options = {"DEFAULT_CLOSED"}
+    bl_parent_id = SOLLUMZ_PT_MAT_PANEL.bl_idname
+    bl_order = 100
+
+    @classmethod
+    def poll(cls, context):
+        return context.active_object is not None and context.active_object.active_material is not None and context.active_object.active_material.sollum_type == MaterialType.SHADER
+
+    def draw(self, context):
+        layout = self.layout
+
+        aobj = context.active_object
+        if context.active_object is None:
+            return
+
+        mat = aobj.active_material
+        if mat is None:
+            return
 
 class SOLLUMZ_PT_COPY_TRANSFORMS_SUBPANEL(bpy.types.Panel):
     bl_space_type = "PROPERTIES"

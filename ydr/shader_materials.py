@@ -1122,7 +1122,71 @@ def create_terrain_shader(b: ShaderBuilder):
     link_value_shader_parameters(b)
 
 def create_vehicle_paint_shader(b: ShaderBuilder):
-    create_basic_shader_nodes(b)
+    shader = b.shader
+    filename = b.filename
+    mat = b.material
+    node_tree = b.node_tree
+    bsdf = b.bsdf
+
+    texture = None
+    texture2 = None
+    tintpal = None
+    diffpal = None
+    bumptex = None
+    spectex = None
+    detltex = None
+    is_distance_map = False
+
+    for param in shader.parameters:
+        match param.type:
+            case ShaderParameterType.TEXTURE:
+                imgnode = create_image_node(node_tree, param)
+                if param.name in ("DiffuseSampler", "PlateBgSampler"):
+                    texture = imgnode
+                elif param.name in ("BumpSampler", "PlateBgBumpSampler"):
+                    bumptex = imgnode
+                elif param.name == "SpecSampler":
+                    spectex = imgnode
+                elif param.name == "DetailSampler":
+                    detltex = imgnode
+                elif param.name == "TintPaletteSampler":
+                    tintpal = imgnode
+                elif param.name == "TextureSamplerDiffPal":
+                    diffpal = imgnode
+                elif param.name == "distanceMapSampler":
+                    texture = imgnode
+                    is_distance_map = True
+                elif param.name in ("DiffuseSampler2", "DiffuseExtraSampler"):
+                    texture2 = imgnode
+                else:
+                    if not texture:
+                        texture = imgnode
+            case (ShaderParameterType.FLOAT |
+                  ShaderParameterType.FLOAT2 |
+                  ShaderParameterType.FLOAT3 |
+                  ShaderParameterType.FLOAT4 |
+                  ShaderParameterType.FLOAT4X4):
+                create_parameter_node(node_tree, param)
+            case _:
+                raise Exception(f"Unknown shader parameter! {param.type=} {param.name=}")
+
+    # Create NodeTree for group
+    group_ShaderNodeTree = bpy.data.node_groups.new('Vehicle Preview Options', 'ShaderNodeTree')
+    # Create output socket interface for group NodeTree
+    group_NodeGroupOutput = group_ShaderNodeTree.nodes.new('NodeGroupOutput')
+
+    # Helper variable
+    group_NodeTreeInterface = group_ShaderNodeTree.interface
+    # Adds output socket to group node
+    group_NodeTreeInterface.new_socket('Float', in_out='OUTPUT', socket_type='NodeSocketFloat')
+
+    # link value parameters
+    link_value_shader_parameters(b)
+
+    if bpy.app.version < (4, 2, 0):
+        mat.blend_method = blend_mode
+
+    #create_basic_shader_nodes(b)
 
 
 def create_uv_map_nodes(b: ShaderBuilder):
