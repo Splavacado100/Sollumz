@@ -1121,6 +1121,19 @@ def create_terrain_shader(b: ShaderBuilder):
     bsdf.inputs["Specular IOR Level"].default_value = 0
     link_value_shader_parameters(b)
 
+
+# def create_vehicle_preview_node(b: ShaderBuilder):
+#     def link_preview_parameter
+#     return
+
+
+def create_burn_nodes(b: ShaderBuilder):
+    shader = b.shader
+    node_tree = b.node_tree
+    bsdf = b.bsdf
+    links = node_tree.links
+
+
 def create_vehicle_paint_shader(b: ShaderBuilder):
     shader = b.shader
     filename = b.filename
@@ -1171,14 +1184,60 @@ def create_vehicle_paint_shader(b: ShaderBuilder):
                 raise Exception(f"Unknown shader parameter! {param.type=} {param.name=}")
 
     # Create NodeTree for group
-    group_ShaderNodeTree = bpy.data.node_groups.new('Vehicle Preview Options', 'ShaderNodeTree')
+    group_ShaderNodeTree = bpy.data.node_groups.new("Vehicle Preview Options", "ShaderNodeTree")
     # Create output socket interface for group NodeTree
-    group_NodeGroupOutput = group_ShaderNodeTree.nodes.new('NodeGroupOutput')
+    group_NodeGroupOutput = group_ShaderNodeTree.nodes.new("NodeGroupOutput")
 
     # Helper variable
     group_NodeTreeInterface = group_ShaderNodeTree.interface
-    # Adds output socket to group node
-    group_NodeTreeInterface.new_socket('Float', in_out='OUTPUT', socket_type='NodeSocketFloat')
+    # Adds output sockets to group node NodeTreeInterfaceSocket
+    group_NodeTreeInterface.new_socket("Primary Color", in_out="OUTPUT", socket_type="NodeSocketColor")
+    group_NodeTreeInterface.new_socket("Secondary Color", in_out="OUTPUT", socket_type="NodeSocketColor")
+    group_NodeTreeInterface.new_socket("Wheel Color", in_out="OUTPUT", socket_type="NodeSocketColor")
+    group_NodeTreeInterface.new_socket("Interior/Trim Color", in_out="OUTPUT", socket_type="NodeSocketColor")
+    group_NodeTreeInterface.new_socket("Dashboard Color", in_out="OUTPUT", socket_type="NodeSocketColor")
+    group_NodeTreeInterface.new_socket("Dirt Intensity", in_out="OUTPUT", socket_type="NodeSocketFloat")
+    group_NodeTreeInterface.new_socket("Show Burn Effect", in_out="OUTPUT", socket_type="NodeSocketBool")
+    group_NodeTreeInterface.new_socket("Show Deformation", in_out="OUTPUT", socket_type="NodeSocketBool")
+
+    primary_color_ShaderNode = group_ShaderNodeTree.nodes.new("ShaderNodeRGB")
+    primary_color_ShaderNode.outputs["Color"].default_value = (1.0, 1.0, 1.0, 1.0)
+    primary_color_ShaderNode.location = (-400, 400)
+    primary_color_ShaderNode.label = "Primary Color"
+    group_ShaderNodeTree.links.new(primary_color_ShaderNode.outputs["Color"], group_NodeGroupOutput.inputs["Primary Color"])
+
+    secondary_color_ShaderNode = group_ShaderNodeTree.nodes.new("ShaderNodeRGB")
+    secondary_color_ShaderNode.outputs["Color"].default_value = (1.0, 1.0, 1.0, 1.0)
+    secondary_color_ShaderNode.location = (-400, 200)
+    secondary_color_ShaderNode.label = "Secondary Color"
+    group_ShaderNodeTree.links.new(secondary_color_ShaderNode.outputs["Color"], group_NodeGroupOutput.inputs["Secondary Color"])
+
+    wheel_color_ShaderNode = group_ShaderNodeTree.nodes.new("ShaderNodeRGB")
+    wheel_color_ShaderNode.outputs["Color"].default_value = (0.05, 0.05, 0.05, 1.0)
+    wheel_color_ShaderNode.location = (-400, 0)
+    wheel_color_ShaderNode.label = "Wheel Color"
+    group_ShaderNodeTree.links.new(wheel_color_ShaderNode.outputs["Color"], group_NodeGroupOutput.inputs["Wheel Color"])
+
+    interior_trim_color_ShaderNode = group_ShaderNodeTree.nodes.new("ShaderNodeRGB")
+    interior_trim_color_ShaderNode.outputs["Color"].default_value = (0.02, 0.02, 0.02, 1.0)
+    interior_trim_color_ShaderNode.location = (-400, -200)
+    interior_trim_color_ShaderNode.label = "Interior/Trim Color"
+    group_ShaderNodeTree.links.new(interior_trim_color_ShaderNode.outputs["Color"], group_NodeGroupOutput.inputs["Interior/Trim Color"])
+
+    dashboard_color_ShaderNode = group_ShaderNodeTree.nodes.new("ShaderNodeRGB")
+    dashboard_color_ShaderNode.outputs["Color"].default_value = (0.02, 0.02, 0.02, 1.0)
+    dashboard_color_ShaderNode.location = (-400, -400)
+    dashboard_color_ShaderNode.label = "Dashboard Color"
+    group_ShaderNodeTree.links.new(dashboard_color_ShaderNode.outputs["Color"], group_NodeGroupOutput.inputs["Dashboard Color"])
+
+    dirt_intensity_ShaderNode = group_ShaderNodeTree.nodes.new("ShaderNodeValue")
+    dirt_intensity_ShaderNode.outputs["Value"].default_value = 0.0
+    dirt_intensity_ShaderNode.location = (-400, -600)
+    dirt_intensity_ShaderNode.label = "Dirt Intensity"
+    group_ShaderNodeTree.links.new(dirt_intensity_ShaderNode.outputs["Value"], group_NodeGroupOutput.inputs["Dirt Intensity"])
+
+    prev = node_tree.nodes.new("ShaderNodeGroup")
+    prev.node_tree = group_ShaderNodeTree#bpy.data.node_groups['OldNodeGroupName']
 
     # link value parameters
     link_value_shader_parameters(b)
